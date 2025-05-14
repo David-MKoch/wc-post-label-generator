@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'IranYekanRegular';
+    src: url('IranYekanRegular.woff2') format('woff2');
+}
+body {
+	font-family: 'IranYekanRegular', Arial, sans-serif;
+	margin: 0;
+	font-size: 16px;
+}
+.label-border {
+    width: 10cm;
+    height: 10cm;
+    background-image: repeating-linear-gradient(135deg, #cf2004 0, #cf2004 15px, transparent 15px, transparent 25px, #3ea8f2 25px, #3ea8f2 40px, transparent 40px, transparent 50px);
+    padding: 10px;
+    margin: .5rem;
+    flex: 0 1 100%;
+}
+.label-body {
+    background: #fff;
+    padding: 10px;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.label-data {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: scaleY(1);
+    transform-origin: top;
+}
+.header {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+	justify-content: space-between;
+}
+.mylogo {
+    width: 100%;
+}
+.order-data {
+    width: 100%;
+}
+.mylogo img {
+    width: 100%;
+	height: 35px;
+}
+.mylogo svg{
+    width: 100%;
+    transform: scaleY(2);
+}
+.barcode-container{
+    text-align: center;
+    font-family: monospace;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.page-break {
+    page-break-after: always;
+    clear: both;
+}
