@@ -228,6 +228,14 @@ function html_content_shipping_label(WC_Order $order, $store_address, $store_pho
 				if(isset($order_totals['cod_amount'])){
 					echo "<strong> {$order_totals['prepayment_amount']['label']} </strong> {$order_totals['prepayment_amount']['value']}<br>";
 					echo "<strong> {$order_totals['cod_amount']['label']} (COD) </strong> {$order_totals['cod_amount']['value']}<br>";
+				}else{
+				    $pre_cod = $order->get_meta('_partial_payment_amount');
+	                if(!empty($pre_cod)){
+	                    $pre_cod = wc_price($pre_cod);
+	                    $cod = wc_price($order->get_meta('_cod_amount'));
+	                    echo "<strong> پیش پرداخت: </strong> {$pre_cod}<br>";
+					    echo "<strong> پرداخت در محل (COD): </strong> {$cod}<br>";
+	                }
 				}
 				if ($customer_note) {
 					echo "<hr><strong>یادداشت مشتری:</strong><br>$customer_note<br>";
